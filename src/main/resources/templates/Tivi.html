@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link th:rel="stylesheet" th:href="@{/css/styte.css}" />
+  <link th:rel="stylesheet" th:href="@{/themify-icons/themify-icons.css}" />
+  <!-- <title>Document</title> -->
+</head>
+  <body style="background-color: white">
+  <header>
+    <div class="top">
+      <div id="topmenu">
+        <ul>
+          <li class="li">
+            <div class="name-web">
+              <a th:href="@{/hightech/home}">HighTech</a>
+            </div>
+          </li>
+          <li>
+            <div class="search-container">
+              <form action="#">
+                <input
+                        type="text"
+                        placeholder="Search..."
+                        name="search"
+                        class="search-bar"
+                />
+                <button type="submit" class="search-bar">
+                  <i class="ti-search" ></i>
+                </button>
+              </form>
+            </div>
+          </li>
+        </ul>
+      </div>
+      <div id="topmenu_2">
+        <ul class="ul">
+          <li class="li">
+            <div class="login">
+              <!-- <div class="login_1"> -->
+              <button class="dropdown">
+                <img th:src="@{/img/user.png}" alt="" width="20px" height="20px" />
+              </button>
+              <ul class="subnav">
+                <li><a th:href="@{/hightech/login}">Đăng nhập</a></li>
+                <li><a href="">Đăng xuất</a></li>
+              </ul>
+              <!-- </div> -->
+            </div>
+          </li>
+          <li class="li">
+            <div class="favorites">
+              <div class="favorites_1">
+                <img
+                        th:src="@{/img/heart.png}"
+                        alt=""
+                        width="20px"
+                        height="20px"
+                />
+                <!-- <a href="">Favorites</a> -->
+              </div>
+            </div>
+          </li>
+          <li class="li">
+            <div class="cart-shopping">
+              <button>
+                <img
+                        th:src="@{/img/shopping-cart.png}"
+                        alt=""
+                        width="20px"
+                        height="20px"
+                        class="img_cart"
+                />
+              </button>
+
+              <div class="cart">
+                <div class="cart_1">
+                  <i class="icon_close ti-close"></i>
+                  <p>Cart</p>
+                </div>
+                <div class="cart_2">
+                  <p>Cart is empty</p>
+                </div>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div th:class="nav">
+      <ul>
+        <li><a th:href="@{/hightech/computers}">Computers</a></li>
+        <li><a th:href="@{/hightech/tablets}">Tablets</a></li>
+        <li><a th:href="@{/hightech/cameras}">Cameras</a></li>
+        <li><a th:href="@{/hightech/audios}">Audios</a></li>
+        <li><a th:href="@{/hightech/mobiles}">Mobile</a></li>
+        <li><a th:href="@{/hightech/tivis}">Tivi</a></li>
+        <li><a th:href="@{/hightech/wearable-techs}">Wearable Tech</a></li>
+        <!-- <li><a href="">Sale</a></li> -->
+      </ul>
+    </div>
+  </header>
+    <div class="container">
+      <div class="headline">
+        <h1>Computer</h1>
+      </div>
+      <div class="container-products">
+        <aside class="container-filter">
+          <section class="container-filter-sec">
+            <span class="filter-by">
+              <h2>Filter by</h2>
+            </span>
+            <ul class="filter-options">
+              <li class="option-1">
+                <button class="btn-option-1">
+                  <span>Computers</span>
+                  <span class="ti-plus"></span>
+                </button>
+                <div class="sub-option-1"></div>
+              </li>
+              <li class="option-2">
+                <button class="btn-option-2">
+                  <span>Price</span>
+                  <span class="ti-plus"></span>
+                </button>
+                <div class="sub-option-2"></div>
+              </li>
+            </ul>
+          </section>
+        </aside>
+        <div class="container-products-item">
+          <!-- <div class="sort"> -->
+          <div class="sort-by">
+            <button class="btn-sort-by">
+              <span class="sp-sort-by">Sort by</span>
+              <span><div class="down ti-angle-down"></div></span>
+            </button>
+            <div class="option-sort">
+              <ul>
+                <li><div>Newest</div></li>
+                <li><div>Price (low to high)</div></li>
+                <li><div>Price (high to low)</div></li>
+                <li><div>Name A-Z</div></li>
+                <li><div>Name Z-A</div></li>
+              </ul>
+            </div>
+            <!-- </div> -->
+          </div>
+          <div class="product-items">
+            <ul class="list-items">
+              <li class="item-grid">
+                <div class="item-root">
+                  <a href=""
+                    ><img
+                      src="../static/img/tv1.webp"
+                      width="155px"
+                      height="155px"
+                      alt=""
+                  /></a>
+                  <div class="item-content">
+                    <a href="">
+                      <div>
+                        <h3>Shel 50" Class LED 4K UHD Smart TV</h3>
+                        <div>
+                          <span>$85.00</span>
+                        </div>
+                      </div>
+                    </a>
+                  </div>
+                </div>
+              </li>
+              <li class="item-grid">
+                <div class="item-root">
+                  <a href=""
+                    ><img
+                      src="../static/img/tv2.webp"
+                      width="155px"
+                      height="155px"
+                      alt=""
+                  /></a>
+                  <div class="item-content">
+                    <a href="">
+                      <div>
+                        <h3>Shel 40" Class LED Full HD Smart TV</h3>
+                        <div>
+                          <span>$85.00</span>
+                        </div>
+                      </div>
+                    </a>
+                  </div>
+                </div>
+              </li>
+              <li class="item-grid">
+                <div class="item-root">
+                  <a href=""
+                    ><img
+                      src="../static/img/tv3.webp"
+                      width="155px"
+                      height="155px"
+                      alt=""
+                  /></a>
+                  <div class="item-content">
+                    <a href="">
+                      <div>
+                        <h3>Allure 55" Class LED 4K UHD Smart TV</h3>
+                        <div>
+                          <span>$85.00</span>
+                        </div>
+                      </div>
+                    </a>
+                  </div>
+                </div>
+              </li>
+              <li class="item-grid">
+                <div class="item-root">
+                  <a href=""
+                    ><img
+                      src="../static/img/tv4.webp"
+                      width="155px"
+                      height="155px"
+                      alt=""
+                  /></a>
+                  <div class="item-content">
+                    <a href="">
+                      <div>
+                        <h3>42" Class Full HD Smart Streamer TV</h3>
+                        <div>
+                          <span>$85.00</span>
+                        </div>
+                      </div>
+                    </a>
+                  </div>
+                </div>
+              </li>
+              <li class="item-grid">
+                <div class="item-root">
+                  <a href=""
+                    ><img
+                      src="../static/img/tv5.webp"
+                      width="155px"
+                      height="155px"
+                      alt=""
+                  /></a>
+                  <div class="item-content">
+                    <a href="">
+                      <div>
+                        <h3>65" Class Nano LED 4K UHD Smart TV</h3>
+                        <div>
+                          <span>$85.00</span>
+                        </div>
+                      </div>
+                    </a>
+                  </div>
+                </div>
+              </li>
+              <li class="item-grid">
+                <div class="item-root">
+                  <!-- <a href=""
+                    ><img
+                      src="./img/tablets6.webp"
+                      width="155px"
+                      height="155px"
+                      alt=""
+                  /></a>
+                  <div class="item-content">
+                    <a href="">
+                      <div>
+                        <h3>Ocean Pro 11 - 12.3" Touch Screen</h3>
+                        <div>
+                          <span>$85.00</span>
+                        </div>
+                      </div>
+                    </a>
+                  </div> -->
+                </div>
+              </li>
+              <li class="item-grid">
+                <div class="item-root">
+                  <!-- <a href=""
+                    ><img
+                      src="./img/tablets7.webp"
+                      width="155px"
+                      height="155px"
+                      alt=""
+                  /></a>
+                  <div class="item-content">
+                    <a href="">
+                      <div>
+                        <h3>Corr Playtime 10.3", 32GB With Wi-Fi</h3>
+                        <div>
+                          <span>$85.00</span>
+                        </div>
+                      </div>
+                    </a>
+                  </div> -->
+                </div>
+              </li>
+              <li class="item-grid">
+                <div class="item-root">
+                  <!-- <a href=""
+                    ><img
+                      src="./img/tablets8.webp"
+                      width="155px"
+                      height="155px"
+                      alt=""
+                  /></a>
+                  <div class="item-content">
+                    <a href="">
+                      <div>
+                        <h3>Space Tablet S7 - 11”, 128GB Wi-Fi</h3>
+                        <div>
+                          <span>$85.00</span>
+                        </div>
+                      </div>
+                    </a>
+                  </div> -->
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+  <!-- <footer>
+    <p id="copyright">Copyright &copy; 2027 by DucLinhTechnology.</p>
+  </footer> -->
+</html>

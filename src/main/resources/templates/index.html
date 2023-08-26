@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" >
+  <head>
+    <meta charset="UTF-8" />
+<!--    <meta http-equiv="X-UA-Compatible" content="IE=edge" />-->
+<!--    <meta name="viewport" content="width=device-width, initial-scale=1.0" />-->
+    <link th:href="@{/css/styte.css}"  type="text/css"   rel="stylesheet" />
+<!--    <link th:href="@{/styles/cssandjs/main.css}" rel="stylesheet" />-->
+    <link th:href="@{/themify-icons/themify-icons.css}" rel="stylesheet"/>
+    <title>Home</title>
+  </head>
+  <body>
+    <header>
+      <div th:class="top">
+        <div th:id="topmenu">
+          <ul>
+            <li th:class="li">
+              <div th:class="name-web">
+                <a th:href="ad">HighTech</a>
+              </div>
+            </li>
+            <li>
+              <div th:class="search-container">
+                <form th:action="aa">
+                  <input
+                    th:type="text"
+                    th:placeholder="Search..."
+                    th:name="search"
+                    th:class="search-bar"
+                  />
+                  <button th:type="submit" th:class="search-bar" >
+                    <i th:class="ti-search">
+                    </i>
+                  </button>
+                </form>
+              </div>
+            </li>
+          </ul>
+        </div>
+        <div th:id="topmenu_2">
+          <ul th:class="ul">
+            <li th:class="li">
+              <div th:class="login">
+                <!-- <div class="login_1"> -->
+                <button th:class="dropdown">
+                  <img th:src="@{/img/user.png}" th:width="20px" th:height="20px" />
+                </button>
+                <ul th:class="subnav">
+                  <li><a th:href="@{/hightech/login}">Đăng nhập</a></li>
+                  <li><a th:href="as">Đăng xuất</a></li>
+                </ul>
+                <!-- </div> -->
+              </div>
+            </li>
+            <li th:class="li">
+              <div th:class="favorites">
+                <div th:class="favorites_1">
+                  <img
+                    th:src="@{/img/heart.png}"
+                    th:width="20px"
+                    th:height="20px"
+                  />
+                  <!-- <a href="">Favorites</a> -->
+                </div>
+              </div>
+            </li>
+            <li th:class="li">
+              <div th:class="cart-shopping">
+                <button>
+                  <img
+                    th:src="@{/img/shopping-cart.png}"
+                    th:width="20px"
+                    th:height="20px"
+                    th:class="img_cart"
+                  />
+                </button>
+                <!-- <input type="text" class="text_count" value="0" /> -->
+                <div th:class="cart">
+                  <div th:class="cart_1">
+                    <div th:class="icon_close">
+                    <i th:class="ti-close"></i>
+                    </div>
+                    <!-- <i class="icon_close ti-close"></i> -->
+                    <p>Cart</p>
+                  </div>
+                  <div th:class="cart_2">
+                    <p>Cart is empty</p>
+                  </div>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div th:class="nav">
+        <ul>
+          <li><a th:href="@{/hightech/computers}">Computers</a></li>
+          <li><a th:href="@{/hightech/tablets}">Tablets</a></li>
+          <li><a th:href="@{/hightech/cameras}">Cameras</a></li>
+          <li><a th:href="@{/hightech/audios}">Audios</a></li>
+          <li><a th:href="@{/hightech/mobiles}">Mobile</a></li>
+          <li><a th:href="@{/hightech/tivis}">Tivi</a></li>
+          <li><a th:href="@{/hightech/wearable-techs}">Wearable Tech</a></li>
+          <!-- <li><a href="">Sale</a></li> -->
+        </ul>
+      </div>
+    </header>
+
+    <div th:class="background">
+      <img th:src="@{/img/bground_web.webp}"  width="100%"/>
+    </div>
+  </body>
+  <footer>
+    <p th:id="copyright"></p>
+  </footer>
+</html>

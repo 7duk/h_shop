@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+  <meta charset="UTF-8" />
+<!--  <meta http-equiv="Content-Type"content="application/x-www-form-urlencoded; charset=UTF-8"/>-->
+  <meta http-equiv="Content-Type"content="text/html; charset=UTF-8"/><!--css-->
+<!--  <link th:href="@{/css/bootstrap.css}"rel="stylesheet"/><link th:href="@{/css/main.css}"rel="stylesheet"/>-->
+<!--  <meta con>-->
+<!--  <meta http-equiv="X-UA-Compatible" content="IE=edge" />-->
+<!--  <meta name="viewport" content="width=device-width, initial-scale=1.0" />-->
+  <link th:rel="stylesheet" th:href="@{/css/styte.css}" />
+  <title>Document</title>
+  <style></style>
+</head>
+
+<body class="login_">
+  <form th:method="post" th:action="@{/auth/authenticate}" th:object="${request}" th:class="formlogin">
+    <table class="tablelogin">
+      <tr>
+        <td>
+          <input th:type="text" th:class="txtUsername" th:id="email"
+                  placeholder="Enter Your Email" th:required th:name  = "email" />
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <input type="text" class="txtPassword" id="password" placeholder="Enter Your Password"   th:required  th:name  = "password"/>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <button class="btnLogin" type="submit">Đăng nhập</button>
+        </td>
+      </tr>
+      <tr>
+        <td th:class="forgotpass">
+          <a href="">Quên mật khẩu?</a>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <div th:class="borderline"></div>
+        </td>
+      </tr>
+      <tr>
+        <td>
+
+          <button th:class="Sign-up"> <a th:href="@{/hightech/register}">Tạo tài khoản mới</a></button>
+        </td>
+      </tr>
+    </table>
+  </form>
+</body>
+
+</html>
